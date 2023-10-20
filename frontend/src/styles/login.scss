@@ -1,0 +1,23 @@
+.login-page {
+  margin-top: -20px;
+  width: 400px;
+  max-width: 100%;
+  margin: 0 auto;
+  .login-container {
+    height: 280px;
+    .login-bg {
+      background: url("../assets/login-bg.png");
+      height: 205px;
+      position: absolute;
+      width: calc(100% - 40px);
+      margin: 0 auto;
+      right: 20px;
+      bottom: 14px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    img {
+      margin-top: 96px;
+    }
+  }
+}

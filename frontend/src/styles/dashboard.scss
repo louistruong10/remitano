@@ -1,0 +1,40 @@
+.dashboard-page {
+  background: url("../assets/pattern.png") no-repeat;
+  .header {
+    .user-name {
+      padding: 6px 20px;
+      display: inline-flex !important;
+      background: #f7f9fc;
+      border-radius: 8px;
+      .ant-badge {
+        line-height: 20px;
+        .ant-badge-status-dot {
+          margin-right: $spacing;
+          width: 12px;
+          height: 12px;
+        }
+      }
+      p {
+        line-height: 20px;
+      }
+    }
+  }
+  .body {
+    .ant-divider-horizontal {
+      // width: calc(100% - 40px);
+      background: #68B8F8;
+      opacity: .5;
+      margin: 0;
+      margin-top:4px;
+      // min-width: calc(100% - 40px);
+    }
+    .group-action {
+      .ant-btn[disabled] { opacity: .5;}
+      .ant-btn-lg {
+        width: 48px;
+        height: 48px;
+        padding-top: 7px;
+      }
+    }
+  }
+}

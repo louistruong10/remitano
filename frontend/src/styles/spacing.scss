@@ -1,0 +1,99 @@
+$spacing: 4px;
+$sizes: 1, 2, 3, 4, 5, 6, 7;
+$properties: p, m;
+
+@each $size in $sizes {
+  @each $property in $properties {
+    .#{$property}l-#{$size} {
+      @if $property == p {
+        padding-left: $spacing * $size;
+      } @else {
+        margin-left: $spacing * $size;
+      }
+    }
+    .#{$property}r-#{$size} {
+      @if $property == p {
+        padding-right: $spacing * $size;
+      } @else {
+        margin-right: $spacing * $size;
+      }
+    }
+    .#{$property}t-#{$size} {
+      @if $property == p {
+        padding-top: $spacing * $size;
+      } @else {
+        margin-top: $spacing * $size;
+      }
+    }
+    .#{$property}b-#{$size} {
+      @if $property == p {
+        padding-bottom: $spacing * $size;
+      } @else {
+        margin-bottom: $spacing * $size;
+      }
+    }
+    .#{$property}x-#{$size} {
+      @extend .#{$property}l-#{$size};
+      @extend .#{$property}r-#{$size};
+    }
+    .#{$property}y-#{$size} {
+      @extend .#{$property}t-#{$size};
+      @extend .#{$property}b-#{$size};
+    }
+    .#{$property}-#{$size} {
+      @extend .#{$property}l-#{$size};
+      @extend .#{$property}r-#{$size};
+      @extend .#{$property}t-#{$size};
+      @extend .#{$property}b-#{$size};
+    }
+  }
+}
+
+$sizes-only: 20;
+$spacing-only: 20px;
+@each $size in $sizes-only {
+  @each $property in $properties {
+    .#{$property}l-#{$size} {
+      @if $property == p {
+        padding-left: $spacing-only;
+      } @else {
+        margin-left: $spacing-only;
+      }
+    }
+    .#{$property}r-#{$size} {
+      @if $property == p {
+        padding-right: $spacing-only;
+      } @else {
+        margin-right: $spacing-only;
+      }
+    }
+    .#{$property}t-#{$size} {
+      @if $property == p {
+        padding-top: $spacing-only;
+      } @else {
+        margin-top: $spacing-only;
+      }
+    }
+    .#{$property}b-#{$size} {
+      @if $property == p {
+        padding-bottom: $spacing-only;
+      } @else {
+        margin-bottom: $spacing-only;
+      }
+    }
+    .#{$property}x-#{$size} {
+      @extend .#{$property}l-#{$size};
+      @extend .#{$property}r-#{$size};
+    }
+    .#{$property}y-#{$size} {
+      @extend .#{$property}t-#{$size};
+      @extend .#{$property}b-#{$size};
+    }
+    .#{$property}-#{$size} {
+      @extend .#{$property}l-#{$size};
+      @extend .#{$property}r-#{$size};
+      @extend .#{$property}t-#{$size};
+      @extend .#{$property}b-#{$size};
+    }
+  }
+}
